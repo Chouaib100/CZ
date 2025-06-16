@@ -2,10 +2,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,10 +27,10 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: 'Home', id: 'hero' },
-    { label: 'About', id: 'about' },
-    { label: 'Work', id: 'projects' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Home', id: 'hero', isSection: true },
+    { label: 'About', id: 'about', isSection: true },
+    { label: 'Work', path: '/work', isSection: false },
+    { label: 'Contact', id: 'contact', isSection: true },
   ];
 
   return (
@@ -37,20 +39,36 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-accent">
+          <Link to="/" className="text-2xl font-bold text-accent">
             CZ
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-accent transition-colors duration-300 font-medium"
-              >
-                {item.label}
-              </button>
+              item.isSection ? (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    if (location.pathname !== '/') {
+                      window.location.href = `/#${item.id}`;
+                    } else {
+                      scrollToSection(item.id);
+                    }
+                  }}
+                  className="text-white hover:text-accent transition-colors duration-300 font-medium"
+                >
+                  {item.label}
+                </button>
+              ) : (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  className="text-white hover:text-accent transition-colors duration-300 font-medium"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </div>
 
@@ -70,13 +88,30 @@ const Navigation = () => {
           <div className="md:hidden mt-4 pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4 bg-primary/95 rounded-lg p-4">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-accent transition-colors duration-300 font-medium text-left"
-                >
-                  {item.label}
-                </button>
+                item.isSection ? (
+                  <button
+                    key={item.id}
+                    onClick={() => {
+                      if (location.pathname !== '/') {
+                        window.location.href = `/#${item.id}`;
+                      } else {
+                        scrollToSection(item.id);
+                      }
+                    }}
+                    className="text-white hover:text-accent transition-colors duration-300 font-medium text-left"
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    className="text-white hover:text-accent transition-colors duration-300 font-medium text-left"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
             </div>
           </div>

@@ -1,19 +1,26 @@
 
 import { Heart } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      window.location.href = `/#${sectionId}`;
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
   const footerLinks = [
-    { label: 'Home', id: 'hero' },
-    { label: 'About', id: 'about' },
-    { label: 'Work', id: 'projects' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Home', id: 'hero', isSection: true },
+    { label: 'About', id: 'about', isSection: true },
+    { label: 'Work', path: '/work', isSection: false },
+    { label: 'Contact', id: 'contact', isSection: true },
   ];
 
   return (
@@ -27,13 +34,23 @@ const Footer = () => {
 
           <div className="flex space-x-8 mb-6 md:mb-0">
             {footerLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-gray-300 hover:text-accent transition-colors duration-300"
-              >
-                {link.label}
-              </button>
+              link.isSection ? (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-gray-300 hover:text-accent transition-colors duration-300"
+                >
+                  {link.label}
+                </button>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.path}
+                  className="text-gray-300 hover:text-accent transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
         </div>
