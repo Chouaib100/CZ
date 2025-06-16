@@ -2,8 +2,11 @@
 import { Download, Code, Smartphone, Database, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslation } from '@/contexts/TranslationContext';
 
 const AboutSection = () => {
+  const { t } = useTranslation();
+
   const skills = [
     { name: 'HTML5', icon: Code, color: 'text-orange-400' },
     { name: 'CSS3', icon: Code, color: 'text-blue-400' },
@@ -18,18 +21,18 @@ const AboutSection = () => {
   const features = [
     {
       icon: Smartphone,
-      title: 'Responsive Design',
-      description: 'Mobile-first approach ensuring perfect user experience across all devices.'
+      title: t('about.responsive'),
+      description: t('about.responsiveDesc')
     },
     {
       icon: Code,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable code following industry best practices.'
+      title: t('about.cleanCode'),
+      description: t('about.cleanCodeDesc')
     },
     {
       icon: Globe,
-      title: 'Modern Technologies',
-      description: 'Leveraging the latest web technologies for optimal performance.'
+      title: t('about.modern'),
+      description: t('about.modernDesc')
     }
   ];
 
@@ -38,11 +41,10 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="text-accent">Me</span>
+            {t('about.title')} <span className="text-accent">{t('about.me')}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Passionate web developer with expertise in creating modern, scalable web applications. 
-            I transform ideas into digital experiences that engage and inspire.
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -55,23 +57,19 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold mb-4">Professional Web Developer</h3>
+            <h3 className="text-2xl font-semibold mb-4">{t('about.professional')}</h3>
             <p className="text-gray-300 leading-relaxed">
-              With years of experience in web development, I specialize in creating high-performance, 
-              responsive websites that deliver exceptional user experiences. My expertise spans from 
-              frontend technologies like React and modern CSS to backend development with PHP and Laravel.
+              {t('about.bio1')}
             </p>
             <p className="text-gray-300 leading-relaxed">
-              I'm passionate about staying current with the latest web technologies and best practices, 
-              ensuring that every project I work on is built with scalability, performance, and user 
-              experience in mind.
+              {t('about.bio2')}
             </p>
             
             <Button
               className="bg-accent hover:bg-accent/90 text-primary font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
             >
               <Download className="mr-2 h-5 w-5" />
-              Download CV
+              {t('about.downloadCV')}
             </Button>
           </div>
         </div>
@@ -92,7 +90,7 @@ const AboutSection = () => {
         {/* Skills Section */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-8">
-            Technical <span className="text-accent">Skills</span>
+            {t('about.skills')} <span className="text-accent">{t('about.skillsSpan')}</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {skills.map((skill, index) => (

@@ -3,11 +3,14 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from '@/contexts/TranslationContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,10 +30,10 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: 'Home', id: 'hero', isSection: true },
-    { label: 'About', id: 'about', isSection: true },
-    { label: 'Work', path: '/work', isSection: false },
-    { label: 'Contact', id: 'contact', isSection: true },
+    { label: t('nav.home'), id: 'hero', isSection: true },
+    { label: t('nav.about'), id: 'about', isSection: true },
+    { label: t('nav.work'), path: '/work', isSection: false },
+    { label: t('nav.contact'), id: 'contact', isSection: true },
   ];
 
   return (
@@ -70,6 +73,7 @@ const Navigation = () => {
                 </Link>
               )
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
@@ -113,6 +117,9 @@ const Navigation = () => {
                   </Link>
                 )
               ))}
+              <div className="pt-2">
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
         )}
