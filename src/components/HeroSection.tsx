@@ -42,7 +42,7 @@ const HeroSection = () => {
               variant="outline"
               size="lg"
               className="border-accent text-accent hover:bg-accent hover:text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('https://wa.me/+212611540181', '_blank')}
             >
               <Mail className="mr-2 h-5 w-5" />
               Contact Me
