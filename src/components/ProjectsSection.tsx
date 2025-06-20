@@ -10,28 +10,28 @@ const ProjectsSection = () => {
       id: 1,
       title: 'Habinor Constructions',
       description: 'Modern real estate and civil engineering solutions for urban growth.',
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&h=300&fit=crop',
+      image: '/lovable-uploads/ba7252cf-9cb1-43cb-b8a1-e89017db546b.png',
       liveUrl: 'https://wsmqyd7m6b.space.minimax.io/'
     },
     {
       id: 2,
       title: 'Pro Architecture',
       description: 'Innovative architecture and construction services for modern real estate.',
-      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&h=300&fit=crop',
+      image: '/lovable-uploads/19e44320-7c27-4193-8f87-dd939720a31d.png',
       liveUrl: 'https://atelier-lumina-design.lovable.app'
     },
     {
       id: 3,
       title: 'Batimex Builders',
       description: 'Expert solutions in construction, real estate, and civil engineering.',
-      image: 'https://images.unsplash.com/photo-1448630360428-65456885c650?w=500&h=300&fit=crop',
+      image: '/lovable-uploads/96e276d1-2acb-454c-93b5-19e97d09f12c.png',
       liveUrl: 'https://batimex.vercel.app/'
     },
     {
       id: 4,
       title: 'Atlas Constructions',
       description: 'Complete building and real estate services with professional engineering touch.',
-      image: 'https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=500&h=300&fit=crop',
+      image: '/lovable-uploads/42230f0c-9528-4f71-9ddb-9a2731bbf677.png',
       liveUrl: 'https://atlasbtp-pied.vercel.app/'
     }
   ];
@@ -60,7 +60,7 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-48 sm:h-56 md:h-64 object-cover object-top transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Button
