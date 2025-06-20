@@ -51,8 +51,16 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Bio Section */}
           <div className="space-y-6">
-            <div className="w-64 h-64 mx-auto lg:mx-0 bg-gradient-to-br from-accent to-cyan-500 rounded-full flex items-center justify-center text-6xl font-bold text-primary">
-              CZ
+            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 mx-auto lg:mx-0 relative">
+              <div className="w-full h-full bg-gradient-to-br from-accent to-cyan-500 rounded-full p-2 shadow-2xl">
+                <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center">
+                  <img
+                    src="/lovable-uploads/4410c20c-02c1-451e-92bc-875026f3d4b5.png"
+                    alt="Developer working"
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
