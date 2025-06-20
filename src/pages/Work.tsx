@@ -8,59 +8,73 @@ const Work = () => {
   const templates = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Modern online shopping experience with seamless checkout and product showcase.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Habinor Constructions',
+      description: 'Modern real estate and civil engineering solutions for urban growth.',
+      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&h=300&fit=crop',
+      liveUrl: 'https://wsmqyd7m6b.space.minimax.io/'
     },
     {
       id: 2,
-      title: 'Creative Portfolio',
-      description: 'Stunning portfolio website showcasing creative work with smooth animations.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Pro Architecture',
+      description: 'Innovative architecture and construction services for modern real estate.',
+      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&h=300&fit=crop',
+      liveUrl: 'https://atelier-lumina-design.lovable.app'
     },
     {
       id: 3,
-      title: 'Business Landing Page',
-      description: 'Professional landing page designed to convert visitors into customers.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Batimex Builders',
+      description: 'Expert solutions in construction, real estate, and civil engineering.',
+      image: 'https://images.unsplash.com/photo-1448630360428-65456885c650?w=500&h=300&fit=crop',
+      liveUrl: 'https://batimex.vercel.app/'
     },
     {
       id: 4,
-      title: 'Restaurant Website',
-      description: 'Appetizing restaurant website with online ordering and reservation system.',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Atlas Constructions',
+      description: 'Complete building and real estate services with professional engineering touch.',
+      image: 'https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=500&h=300&fit=crop',
+      liveUrl: 'https://atlasbtp-pied.vercel.app/'
     },
     {
       id: 5,
-      title: 'Mobile App Landing',
-      description: 'Modern landing page for mobile applications with interactive elements.',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'BâtiPro Solutions',
+      description: 'Reliable construction and real estate services for modern infrastructure.',
+      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&h=300&fit=crop',
+      liveUrl: 'https://batirpro.vercel.app/'
     },
     {
       id: 6,
-      title: 'Blog Platform',
-      description: 'Clean and elegant blog platform with advanced content management.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Zah Construction',
+      description: 'Professional building and real estate services for innovative development.',
+      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&h=300&fit=crop',
+      liveUrl: 'https://zah-bati.vercel.app/'
     },
     {
       id: 7,
-      title: 'Corporate Website',
-      description: 'Professional corporate website with company information and services.',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Construct Maroc',
+      description: 'Industrial construction and engineering solutions for large-scale projects.',
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&h=300&fit=crop',
+      liveUrl: 'https://constructmaroc.vercel.app/'
     },
     {
       id: 8,
-      title: 'Real Estate Portal',
-      description: 'Complete real estate platform with property listings and search functionality.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Structura CC Design',
+      description: 'Smart construction and real estate services with civil engineering expertise.',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=300&fit=crop',
+      liveUrl: 'https://orange-gray-architect.vercel.app/'
+    },
+    {
+      id: 9,
+      title: 'Batimex Construction',
+      description: 'Trusted real estate, construction, and civil engineering services.',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500&h=300&fit=crop',
+      liveUrl: 'https://batmix01.vercel.app/'
+    },
+    {
+      id: 10,
+      title: 'Génie Atlas',
+      description: 'Innovative civil engineering and real estate development solutions.',
+      image: 'https://images.unsplash.com/photo-1590725175765-6e3c2e3c4e20?w=500&h=300&fit=crop',
+      liveUrl: 'https://genieatlas.vercel.app/'
     }
   ];
 
@@ -78,7 +92,7 @@ const Work = () => {
               My <span className="text-accent">Work</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore my collection of website templates and projects, each crafted with attention to detail and modern design principles.
+              Explore my collection of construction and real estate website templates, each crafted with attention to detail and modern design principles.
             </p>
           </div>
         </div>

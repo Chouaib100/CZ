@@ -8,31 +8,31 @@ const ProjectsSection = () => {
   const featuredProjects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Modern online shopping experience with seamless checkout and product showcase.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Habinor Constructions',
+      description: 'Modern real estate and civil engineering solutions for urban growth.',
+      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&h=300&fit=crop',
+      liveUrl: 'https://wsmqyd7m6b.space.minimax.io/'
     },
     {
       id: 2,
-      title: 'Creative Portfolio',
-      description: 'Stunning portfolio website showcasing creative work with smooth animations.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Pro Architecture',
+      description: 'Innovative architecture and construction services for modern real estate.',
+      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&h=300&fit=crop',
+      liveUrl: 'https://atelier-lumina-design.lovable.app'
     },
     {
       id: 3,
-      title: 'Business Landing Page',
-      description: 'Professional landing page designed to convert visitors into customers.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Batimex Builders',
+      description: 'Expert solutions in construction, real estate, and civil engineering.',
+      image: 'https://images.unsplash.com/photo-1448630360428-65456885c650?w=500&h=300&fit=crop',
+      liveUrl: 'https://batimex.vercel.app/'
     },
     {
       id: 4,
-      title: 'Restaurant Website',
-      description: 'Appetizing restaurant website with online ordering and reservation system.',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop',
-      liveUrl: '#'
+      title: 'Atlas Constructions',
+      description: 'Complete building and real estate services with professional engineering touch.',
+      image: 'https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=500&h=300&fit=crop',
+      liveUrl: 'https://atlasbtp-pied.vercel.app/'
     }
   ];
 
@@ -45,7 +45,7 @@ const ProjectsSection = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A selection of my best projects and website templates that showcase modern design 
-            and functionality.
+            and functionality for construction and real estate businesses.
           </p>
         </div>
 
