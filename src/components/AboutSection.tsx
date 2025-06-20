@@ -75,6 +75,7 @@ const AboutSection = () => {
             
             <Button
               className="bg-accent hover:bg-accent/90 text-primary font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
+              onClick={() => window.open('https://www.linkedin.com/in/chouaib-zouine', '_blank')}
             >
               <Download className="mr-2 h-5 w-5" />
               {t('about.downloadCV')}

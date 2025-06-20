@@ -51,13 +51,13 @@ const ContactSection = () => {
     {
       icon: Github,
       label: 'GitHub',
-      url: 'https://github.com/chouaibzouine',
+      url: 'https://github.com/Chouaib100',
       color: 'hover:text-gray-400'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      url: 'https://linkedin.com/in/chouaibzouine',
+      url: 'https://www.linkedin.com/in/chouaib-zouine',
       color: 'hover:text-blue-400'
     },
     {
@@ -113,7 +113,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium text-white">Location</p>
-                  <p className="text-gray-300">Available Worldwide</p>
+                  <p className="text-gray-300">El Jadida, Maroc</p>
                 </div>
               </div>
             </div>
