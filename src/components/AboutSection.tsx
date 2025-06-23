@@ -1,4 +1,3 @@
-
 import { Download, Code, Smartphone, Database, Globe, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -55,7 +54,7 @@ const AboutSection = () => {
               <div className="w-full h-full bg-gradient-to-br from-accent to-cyan-500 rounded-full p-2 shadow-2xl">
                 <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center">
                   <img
-                    src="/lovable-uploads/a051d36f-6395-481c-8a9c-0400d68d9542.png"
+                    src="/lovable-uploads/52016560-42f3-4e7b-929d-3f44b21c59e1.png"
                     alt="Developer working"
                     className="w-full h-full object-cover object-center"
                   />
@@ -75,7 +74,7 @@ const AboutSection = () => {
             
             <Button
               className="bg-accent hover:bg-accent/90 text-primary font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://chouaib-zouine-ibp05by.gamma.site/', '_blank')}
+              onClick={() => window.open('https://gamma.app/docs/Chouaib-Zouine--6bctrm3vofstn2f', '_blank')}
             >
               <User className="mr-2 h-5 w-5" />
               About Me
