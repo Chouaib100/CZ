@@ -1,5 +1,5 @@
 
-import { Languages } from 'lucide-react';
+import { Languages, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/contexts/TranslationContext';
 
@@ -15,10 +15,11 @@ const LanguageSwitcher = () => {
       variant="ghost"
       size="sm"
       onClick={toggleLanguage}
-      className="text-white hover:text-accent transition-colors duration-300 flex items-center space-x-2"
+      className="relative text-white hover:text-accent hover:bg-accent/10 transition-all duration-300 flex items-center space-x-2 px-3 py-2 rounded-full border border-accent/20 hover:border-accent/40 backdrop-blur-sm bg-primary/20 hover:bg-primary/30"
     >
-      <Languages className="h-4 w-4" />
-      <span className="font-medium">{language === 'en' ? 'FR' : 'EN'}</span>
+      <Globe className="h-4 w-4" />
+      <span className="font-medium text-sm">{language === 'en' ? 'FR' : 'EN'}</span>
+      <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-pulse"></div>
     </Button>
   );
 };

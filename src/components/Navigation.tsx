@@ -47,7 +47,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               item.isSection ? (
                 <button
@@ -76,21 +76,24 @@ const Navigation = () => {
             <LanguageSwitcher />
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-white hover:text-accent"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          {/* Mobile Menu Button and Language Switcher */}
+          <div className="md:hidden flex items-center space-x-3">
+            <LanguageSwitcher />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white hover:text-accent"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 animate-fade-in">
-            <div className="flex flex-col space-y-4 bg-primary/95 rounded-lg p-4">
+            <div className="flex flex-col space-y-4 bg-primary/95 rounded-lg p-4 backdrop-blur-md border border-accent/20">
               {navItems.map((item) => (
                 item.isSection ? (
                   <button
@@ -102,7 +105,7 @@ const Navigation = () => {
                         scrollToSection(item.id);
                       }
                     }}
-                    className="text-white hover:text-accent transition-colors duration-300 font-medium text-left"
+                    className="text-white hover:text-accent transition-colors duration-300 font-medium text-left py-2"
                   >
                     {item.label}
                   </button>
@@ -110,16 +113,13 @@ const Navigation = () => {
                   <Link
                     key={item.label}
                     to={item.path}
-                    className="text-white hover:text-accent transition-colors duration-300 font-medium text-left"
+                    className="text-white hover:text-accent transition-colors duration-300 font-medium text-left py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
                   </Link>
                 )
               ))}
-              <div className="pt-2">
-                <LanguageSwitcher />
-              </div>
             </div>
           </div>
         )}
