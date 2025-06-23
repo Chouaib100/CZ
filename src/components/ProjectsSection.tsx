@@ -3,8 +3,11 @@ import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '@/contexts/TranslationContext';
 
 const ProjectsSection = () => {
+  const { t } = useTranslation();
+
   const featuredProjects = [
     {
       id: 1,
@@ -41,11 +44,10 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Featured <span className="text-accent">Work</span>
+            {t('projects.title')} <span className="text-accent">{t('projects.work')}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A selection of my best projects and website templates that showcase modern design 
-            and functionality for construction and real estate businesses.
+            {t('projects.subtitle')}
           </p>
         </div>
 
@@ -68,7 +70,7 @@ const ProjectsSection = () => {
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    View Template
+                    {t('projects.viewTemplate')}
                   </Button>
                 </div>
               </div>
@@ -83,7 +85,7 @@ const ProjectsSection = () => {
                   onClick={() => window.open(project.liveUrl, '_blank')}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
-                  View Template
+                  {t('projects.viewTemplate')}
                 </Button>
               </CardContent>
             </Card>
@@ -97,7 +99,7 @@ const ProjectsSection = () => {
               size="lg"
               className="bg-accent hover:bg-accent/90 text-primary px-8 py-3 text-lg font-semibold"
             >
-              View All Work
+              {t('projects.viewAllWork')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

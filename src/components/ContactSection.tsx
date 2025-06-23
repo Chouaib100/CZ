@@ -6,8 +6,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useTranslation } from '@/contexts/TranslationContext';
 
 const ContactSection = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,8 +23,8 @@ const ContactSection = () => {
     // Basic form validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Error",
-        description: "Please fill in all fields.",
+        title: t('contact.error'),
+        description: t('contact.fillFields'),
         variant: "destructive"
       });
       return;
@@ -32,8 +34,8 @@ const ContactSection = () => {
     console.log('Form submitted:', formData);
     
     toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
+      title: t('contact.messageSent'),
+      description: t('contact.messageSuccess'),
     });
 
     // Reset form
@@ -77,10 +79,10 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Get In <span className="text-accent">Touch</span>
+            {t('contact.title')} <span className="text-accent">{t('contact.touch')}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to start your next project? Let's discuss how I can help bring your ideas to life.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -88,11 +90,9 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-white">Let's Connect</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-white">{t('contact.connect')}</h3>
               <p className="text-gray-300 leading-relaxed mb-8">
-                I'm always interested in discussing new opportunities and exciting projects. 
-                Whether you need a complete website, want to improve your existing site, or 
-                just have a question, feel free to reach out.
+                {t('contact.connectDesc')}
               </p>
             </div>
 
@@ -102,7 +102,7 @@ const ContactSection = () => {
                   <Mail className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="font-medium text-white">Email</p>
+                  <p className="font-medium text-white">{t('contact.email')}</p>
                   <p className="text-gray-300">chouaibzouine1contact@gmail.com</p>
                 </div>
               </div>
@@ -112,15 +112,15 @@ const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="font-medium text-white">Location</p>
-                  <p className="text-gray-300">El Jadida, Maroc</p>
+                  <p className="font-medium text-white">{t('contact.location')}</p>
+                  <p className="text-gray-300">{t('contact.locationValue')}</p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Follow Me</h4>
+              <h4 className="text-lg font-semibold mb-4 text-white">{t('contact.followMe')}</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -143,7 +143,7 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
-                    Name
+                    {t('contact.name')}
                   </label>
                   <Input
                     id="name"
@@ -152,13 +152,13 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="bg-primary/50 border-accent/30 text-white placeholder:text-gray-400 focus:border-accent"
-                    placeholder="Your name"
+                    placeholder={t('contact.namePlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                    Email
+                    {t('contact.email')}
                   </label>
                   <Input
                     id="email"
@@ -167,13 +167,13 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="bg-primary/50 border-accent/30 text-white placeholder:text-gray-400 focus:border-accent"
-                    placeholder="your.email@example.com"
+                    placeholder={t('contact.emailPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                    Message
+                    {t('contact.message')}
                   </label>
                   <Textarea
                     id="message"
@@ -182,7 +182,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     rows={5}
                     className="bg-primary/50 border-accent/30 text-white placeholder:text-gray-400 focus:border-accent resize-none"
-                    placeholder="Tell me about your project..."
+                    placeholder={t('contact.messagePlaceholder')}
                   />
                 </div>
 
@@ -191,7 +191,7 @@ const ContactSection = () => {
                   className="w-full bg-accent hover:bg-accent/90 text-primary font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105"
                 >
                   <Send className="mr-2 h-5 w-5" />
-                  Send Message
+                  {t('contact.sendMessage')}
                 </Button>
               </form>
             </CardContent>
