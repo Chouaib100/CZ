@@ -1,5 +1,5 @@
 
-import { Download, Code, Smartphone, Database, Globe } from 'lucide-react';
+import { Download, Code, Smartphone, Database, Globe, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTranslation } from '@/contexts/TranslationContext';
@@ -55,7 +55,7 @@ const AboutSection = () => {
               <div className="w-full h-full bg-gradient-to-br from-accent to-cyan-500 rounded-full p-2 shadow-2xl">
                 <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center">
                   <img
-                    src="/lovable-uploads/4410c20c-02c1-451e-92bc-875026f3d4b5.png"
+                    src="/lovable-uploads/a051d36f-6395-481c-8a9c-0400d68d9542.png"
                     alt="Developer working"
                     className="w-full h-full object-cover object-center"
                   />
@@ -75,10 +75,10 @@ const AboutSection = () => {
             
             <Button
               className="bg-accent hover:bg-accent/90 text-primary font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://www.linkedin.com/in/chouaib-zouine', '_blank')}
+              onClick={() => window.open('https://chouaib-zouine-ibp05by.gamma.site/', '_blank')}
             >
-              <Download className="mr-2 h-5 w-5" />
-              {t('about.downloadCV')}
+              <User className="mr-2 h-5 w-5" />
+              About Me
             </Button>
           </div>
         </div>
